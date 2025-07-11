@@ -1143,6 +1143,14 @@ adminFramework.utils.validateForm(formElement);
 </div>
 \`\`\`
 
+Un esempio di layout responsive con classi di utility:
+
+\`\`\`html
+<div class="grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+  <!-- Responsive grid -->
+</div>
+\`\`\`
+
 ---
 
 ## ♿ Accessibilità (WCAG AA)
