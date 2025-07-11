@@ -13,7 +13,7 @@ Un framework CSS completo e modulare per la creazione di dashboard di amministra
 
 ## 📁 Struttura del Framework
 
-\`\`\`
+```
 css/
 ├── variables.css      # Variabili CSS e temi
 ├── base.css          # Stili base e tipografia
@@ -25,7 +25,7 @@ css/
 examples/
 ├── dashboard.html    # Esempio dashboard completa
 └── user-form.html   # Esempio form utente
-\`\`\`
+```
 
 ## 🎨 Componenti Inclusi
 
@@ -56,23 +56,23 @@ examples/
 ## 🛠️ Installazione
 
 ### Opzione 1: File Singolo
-\`\`\`html
+```html
 <link rel="stylesheet" href="css/admin-framework.css">
-\`\`\`
+```
 
 ### Opzione 2: Modulare
-\`\`\`html
+```html
 <link rel="stylesheet" href="css/variables.css">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/layout.css">
 <link rel="stylesheet" href="css/components.css">
 <link rel="stylesheet" href="css/utilities.css">
-\`\`\`
+```
 
 ## 📖 Utilizzo Base
 
 ### Struttura HTML Base
-\`\`\`html
+```html
 <div class="admin-layout">
   <aside class="admin-sidebar">
     <!-- Sidebar content -->
@@ -88,10 +88,10 @@ examples/
     </div>
   </main>
 </div>
-\`\`\`
+```
 
 ### Card Componente
-\`\`\`html
+```html
 <div class="admin-card">
   <div class="admin-card-header">
     <h2 class="admin-card-title">Titolo</h2>
@@ -101,29 +101,29 @@ examples/
     <!-- Contenuto -->
   </div>
 </div>
-\`\`\`
+```
 
 ### Form Elementi
-\`\`\`html
+```html
 <div class="admin-form-group">
   <label class="admin-form-label">Nome</label>
   <input type="text" class="admin-form-input" placeholder="Inserisci nome">
   <div class="admin-form-help">Testo di aiuto</div>
 </div>
-\`\`\`
+```
 
 ### Buttons
-\`\`\`html
+```html
 <button class="admin-btn admin-btn-primary">Primario</button>
 <button class="admin-btn admin-btn-secondary">Secondario</button>
 <button class="admin-btn admin-btn-success">Successo</button>
 <button class="admin-btn admin-btn-danger">Pericolo</button>
-\`\`\`
+```
 
 ## 🎨 Personalizzazione
 
 ### Variabili CSS Principali
-\`\`\`css
+```css
 :root {
   --primary: #2563eb;
   --success: #059669;
@@ -132,21 +132,21 @@ examples/
   --sidebar-width: 16rem;
   --header-height: 4rem;
 }
-\`\`\`
+```
 
 ### Tema Scuro
-\`\`\`html
+```html
 <body data-theme="dark">
-\`\`\`
+```
 
 ### Colori Personalizzati
-\`\`\`css
+```css
 :root {
   --primary: #your-color;
   --primary-hover: #your-hover-color;
   --primary-light: #your-light-color;
 }
-\`\`\`
+```
 
 ## 📱 Responsive Design
 
@@ -157,11 +157,11 @@ Il framework include breakpoint responsive:
 - **Large**: > 1024px
 
 ### Classi Responsive
-\`\`\`html
+```html
 <div class="grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
   <!-- Responsive grid -->
 </div>
-\`\`\`
+```
 
 ## ♿ Accessibilità
 
