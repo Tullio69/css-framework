@@ -8,7 +8,7 @@ Il framework Admin CSS è una soluzione completa per creare dashboard di amminis
 
 ### ⚡ Quick Start
 
-```html
+\`\`\`html
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -31,7 +31,7 @@ Il framework Admin CSS è una soluzione completa per creare dashboard di amminis
     <script src="js/admin-framework.js"></script>
 </body>
 </html>
-```
+\`\`\`
 
 ---
 
@@ -41,7 +41,7 @@ I modal sono finestre di dialogo che si sovrappongono al contenuto principale pe
 
 ### 📋 Esempio Base
 
-```html
+\`\`\`html
 <!-- Pulsante per aprire il modal -->
 <button class="admin-btn admin-btn-primary" onclick="openModal('basicModal')">
     <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" style="margin-right: 8px;">
@@ -95,11 +95,11 @@ I modal sono finestre di dialogo che si sovrappongono al contenuto principale pe
         </div>
     </div>
 </div>
-```
+\`\`\`
 
 ### 🔥 Modal di Conferma
 
-```html
+\`\`\`html
 <!-- Modal di conferma eliminazione -->
 <div class="admin-modal-overlay" id="deleteModal">
     <div class="admin-modal admin-modal-sm">
@@ -135,11 +135,11 @@ I modal sono finestre di dialogo che si sovrappongono al contenuto principale pe
         </div>
     </div>
 </div>
-```
+\`\`\`
 
 ### 🎛️ Funzioni JavaScript
 
-```javascript
+\`\`\`javascript
 // Aprire modal
 function openModal(modalId) {
     const modal = document.getElementById(modalId);
@@ -172,7 +172,7 @@ function saveUser() {
         showToast('error', 'Errore!', 'Compila tutti i campi obbligatori.');
     }
 }
-```
+\`\`\`
 
 ---
 
@@ -182,7 +182,7 @@ I dropdown forniscono un menu di opzioni che appare al click di un pulsante.
 
 ### 🎯 Dropdown Base
 
-```html
+\`\`\`html
 <div class="admin-dropdown" id="actionsDropdown">
     <button class="admin-dropdown-toggle">
         <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" style="margin-right: 8px;">
@@ -217,11 +217,11 @@ I dropdown forniscono un menu di opzioni che appare al click di un pulsante.
         </a>
     </div>
 </div>
-```
+\`\`\`
 
 ### 👤 Dropdown Utente
 
-```html
+\`\`\`html
 <div class="admin-dropdown" id="userDropdown">
     <button class="admin-dropdown-toggle">
         <img src="/placeholder.svg?height=32&width=32" alt="Avatar" class="admin-avatar">
@@ -268,7 +268,7 @@ I dropdown forniscono un menu di opzioni che appare al click di un pulsante.
         </a>
     </div>
 </div>
-```
+\`\`\`
 
 ---
 
@@ -278,7 +278,7 @@ I tooltip mostrano informazioni aggiuntive al passaggio del mouse.
 
 ### 🎯 Tooltip Base
 
-```html
+\`\`\`html
 <!-- Tooltip in alto (default) -->
 <div class="admin-tooltip admin-tooltip-top">
     <button class="admin-btn admin-btn-secondary">
@@ -309,11 +309,11 @@ I tooltip mostrano informazioni aggiuntive al passaggio del mouse.
         Clicca per maggiori informazioni su questa funzionalità
     </div>
 </div>
-```
+\`\`\`
 
 ### 🎨 Tooltip Colorati
 
-```html
+\`\`\`html
 <!-- Tooltip Success -->
 <div class="admin-tooltip admin-tooltip-top admin-tooltip-success">
     <button class="admin-btn admin-btn-success">Salva</button>
@@ -337,7 +337,7 @@ I tooltip mostrano informazioni aggiuntive al passaggio del mouse.
         Attenzione: questa azione è irreversibile
     </div>
 </div>
-```
+\`\`\`
 
 ---
 
@@ -347,7 +347,7 @@ Le notifiche toast mostrano messaggi temporanei all'utente.
 
 ### 🎯 Tipi di Toast
 
-```javascript
+\`\`\`javascript
 // Toast di successo
 showToast('success', 'Operazione Completata!', 'I dati sono stati salvati correttamente nel database.');
 
@@ -362,11 +362,11 @@ showToast('info', 'Nuova Funzionalità!', 'È disponibile una nuova versione del
 
 // Toast personalizzato con durata
 showToast('success', 'Upload Completato!', 'Il file è stato caricato con successo.', 3000);
-```
+\`\`\`
 
 ### 🎛️ Funzione Toast Avanzata
 
-```javascript
+\`\`\`javascript
 function showToast(type, title, message, duration = 5000) {
     const container = document.getElementById('toastContainer') || createToastContainer();
     const toast = document.createElement('div');
@@ -416,7 +416,7 @@ function createToastContainer() {
     document.body.appendChild(container);
     return container;
 }
-```
+\`\`\`
 
 ---
 
@@ -426,7 +426,7 @@ Le schede organizzano il contenuto in sezioni navigabili.
 
 ### 🎯 Tabs Base
 
-```html
+\`\`\`html
 <div class="admin-card">
     <div class="admin-card-header">
         <h3 class="admin-card-title">Impostazioni Utente</h3>
@@ -588,7 +588,7 @@ Le schede organizzano il contenuto in sezioni navigabili.
         </div>
     </div>
 </div>
-```
+\`\`\`
 
 ---
 
@@ -598,7 +598,7 @@ Gli accordion organizzano contenuti in sezioni espandibili.
 
 ### 🎯 Accordion Base
 
-```html
+\`\`\`html
 <div class="admin-card">
     <div class="admin-card-header">
         <h3 class="admin-card-title">Domande Frequenti</h3>
@@ -695,7 +695,7 @@ Gli accordion organizzano contenuti in sezioni espandibili.
         </div>
     </div>
 </div>
-```
+\`\`\`
 
 ---
 
@@ -705,7 +705,7 @@ Gli interruttori toggle permettono di attivare/disattivare opzioni.
 
 ### 🎯 Toggle Base
 
-```html
+\`\`\`html
 <!-- Toggle semplice -->
 <div class="admin-form-group">
     <label class="d-flex align-center gap-3">
@@ -741,11 +741,11 @@ Gli interruttori toggle permettono di attivare/disattivare opzioni.
         <span>Funzionalità non disponibile</span>
     </label>
 </div>
-```
+\`\`\`
 
 ### 🎨 Toggle Colorati
 
-```html
+\`\`\`html
 <!-- Toggle Success -->
 <div class="admin-toggle admin-toggle-success">
     <input type="checkbox" class="admin-toggle-input" checked>
@@ -763,7 +763,7 @@ Gli interruttori toggle permettono di attivare/disattivare opzioni.
     <input type="checkbox" class="admin-toggle-input" checked>
     <span class="admin-toggle-slider"></span>
 </div>
-```
+\`\`\`
 
 ---
 
@@ -773,7 +773,7 @@ Le barre di progresso mostrano l'avanzamento di un'operazione.
 
 ### 🎯 Progress Base
 
-```html
+\`\`\`html
 <!-- Progress standard -->
 <div class="admin-form-group">
     <div class="d-flex justify-between align-center mb-2">
@@ -808,11 +808,11 @@ Le barre di progresso mostrano l'avanzamento di un'operazione.
         <div class="admin-progress-bar success" style="width: 100%"></div>
     </div>
 </div>
-```
+\`\`\`
 
 ### 🎨 Progress Animato
 
-```html
+\`\`\`html
 <!-- Progress con animazione -->
 <div class="admin-progress">
     <div class="admin-progress-bar admin-progress-animated" style="width: 60%"></div>
@@ -827,7 +827,7 @@ Le barre di progresso mostrano l'avanzamento di un'operazione.
 <div class="admin-progress">
     <div class="admin-progress-bar admin-progress-gradient" style="width: 70%"></div>
 </div>
-```
+\`\`\`
 
 ---
 
@@ -837,7 +837,7 @@ Gli stati di caricamento informano l'utente che un'operazione è in corso.
 
 ### 🎯 Spinner
 
-```html
+\`\`\`html
 <!-- Spinner base -->
 <div class="admin-loading">
     <div class="admin-spinner"></div>
@@ -861,11 +861,11 @@ Gli stati di caricamento informano l'utente che un'operazione è in corso.
     <div class="admin-spinner admin-spinner-sm mr-2"></div>
     Salvando...
 </button>
-```
+\`\`\`
 
 ### 🦴 Skeleton Loading
 
-```html
+\`\`\`html
 <!-- Skeleton per lista utenti -->
 <div class="admin-card">
     <div class="admin-card-header">
@@ -928,7 +928,7 @@ Gli stati di caricamento informano l'utente che un'operazione è in corso.
         </tbody>
     </table>
 </div>
-```
+\`\`\`
 
 ---
 
@@ -938,7 +938,7 @@ I breadcrumb mostrano la posizione corrente nella navigazione.
 
 ### 🎯 Breadcrumb Base
 
-```html
+\`\`\`html
 <nav class="admin-breadcrumb">
     <div class="admin-breadcrumb-item">
         <a href="#" class="admin-breadcrumb-link">
@@ -961,7 +961,7 @@ I breadcrumb mostrano la posizione corrente nella navigazione.
         <span class="admin-breadcrumb-current">Mario Rossi</span>
     </div>
 </nav>
-```
+\`\`\`
 
 ---
 
@@ -969,7 +969,7 @@ I breadcrumb mostrano la posizione corrente nella navigazione.
 
 ### 🎯 Variabili CSS Personalizzabili
 
-```css
+\`\`\`css
 :root {
   /* Colori Principali */
   --primary-color: #2563eb;
@@ -1010,11 +1010,11 @@ I breadcrumb mostrano la posizione corrente nella navigazione.
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
 }
-```
+\`\`\`
 
 ### 🌙 Tema Scuro
 
-```css
+\`\`\`css
 [data-theme="dark"] {
   --primary-color: #3b82f6;
   --bg-color: #111827;
@@ -1029,7 +1029,7 @@ I breadcrumb mostrano la posizione corrente nella navigazione.
   --tooltip-bg: #374151;
   --tooltip-color: #f9fafb;
 }
-```
+\`\`\`
 
 ---
 
@@ -1037,7 +1037,7 @@ I breadcrumb mostrano la posizione corrente nella navigazione.
 
 ### 🎯 Inizializzazione
 
-```javascript
+\`\`\`javascript
 // Inizializza il framework
 const adminFramework = new AdminFramework({
     theme: 'light', // 'light' | 'dark' | 'auto'
@@ -1049,11 +1049,11 @@ const adminFramework = new AdminFramework({
 
 // Event listeners automatici
 adminFramework.init();
-```
+\`\`\`
 
 ### 🎛️ Metodi Principali
 
-```javascript
+\`\`\`javascript
 // Modal
 adminFramework.modal.open('modalId');
 adminFramework.modal.close('modalId');
@@ -1085,7 +1085,7 @@ adminFramework.theme.get();
 adminFramework.utils.debounce(func, delay);
 adminFramework.utils.throttle(func, delay);
 adminFramework.utils.validateForm(formElement);
-```
+\`\`\`
 
 ---
 
@@ -1093,7 +1093,7 @@ adminFramework.utils.validateForm(formElement);
 
 ### 🎯 Breakpoints
 
-```css
+\`\`\`css
 /* Mobile First Approach */
 .admin-component {
   /* Mobile styles (default) */
@@ -1119,11 +1119,11 @@ adminFramework.utils.validateForm(formElement);
     /* Large desktop styles */
   }
 }
-```
+\`\`\`
 
 ### 📱 Componenti Responsive
 
-```html
+\`\`\`html
 <!-- Modal responsive -->
 <div class="admin-modal admin-modal-responsive">
   <!-- Su mobile occupa tutto lo schermo -->
@@ -1141,15 +1141,15 @@ adminFramework.utils.validateForm(formElement);
   <!-- Su mobile le tab diventano accordion -->
   <!-- Su desktop rimangono tab -->
 </div>
-```
+\`\`\`
 
 Un esempio di layout responsive con classi di utility:
 
-```html
+\`\`\`html
 <div class="grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
   <!-- Responsive grid -->
 </div>
-```
+\`\`\`
 
 ---
 
@@ -1157,7 +1157,7 @@ Un esempio di layout responsive con classi di utility:
 
 ### 🎯 Attributi ARIA
 
-```html
+\`\`\`html
 <!-- Modal accessibile -->
 <div class="admin-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="admin-modal">
@@ -1200,11 +1200,11 @@ Un esempio di layout responsive con classi di utility:
         </p>
     </div>
 </label>
-```
+\`\`\`
 
 ### ⌨️ Navigazione da Tastiera
 
-```javascript
+\`\`\`javascript
 // Gestione focus trap nei modal
 function trapFocus(element) {
     const focusableElements = element.querySelectorAll(
@@ -1245,7 +1245,7 @@ document.addEventListener('keydown', (e) => {
         if (searchInput) searchInput.focus();
     }
 });
-```
+\`\`\`
 
 ---
 
@@ -1253,7 +1253,7 @@ document.addEventListener('keydown', (e) => {
 
 ### 🎯 Lazy Loading
 
-```javascript
+\`\`\`javascript
 // Caricamento lazy dei componenti
 const lazyComponents = {
     modal: () => import('./components/modal.js'),
@@ -1269,11 +1269,11 @@ async function initComponent(name) {
     }
     return window.adminComponents[name];
 }
-```
+\`\`\`
 
 ### 🔧 Debounce e Throttle
 
-```javascript
+\`\`\`javascript
 // Debounce per ricerca
 const searchInput = document.getElementById('search');
 const debouncedSearch = adminFramework.utils.debounce((query) => {
@@ -1290,7 +1290,7 @@ const throttledScroll = adminFramework.utils.throttle(() => {
 }, 16); // 60fps
 
 window.addEventListener('scroll', throttledScroll);
-```
+\`\`\`
 
 ---
 
@@ -1298,7 +1298,7 @@ window.addEventListener('scroll', throttledScroll);
 
 ### 🎯 Test Unitari
 
-```javascript
+\`\`\`javascript
 // Test per componenti
 describe('AdminFramework Modal', () => {
     test('should open modal', () => {
@@ -1317,11 +1317,11 @@ describe('AdminFramework Modal', () => {
         expect(modal.classList.contains('active')).toBe(false);
     });
 });
-```
+\`\`\`
 
 ### 🔍 Test di Accessibilità
 
-```javascript
+\`\`\`javascript
 // Test ARIA
 describe('Accessibility Tests', () => {
     test('modal should have correct ARIA attributes', () => {
@@ -1341,7 +1341,7 @@ describe('Accessibility Tests', () => {
         expect(dropdown.classList.contains('active')).toBe(true);
     });
 });
-```
+\`\`\`
 
 ---
 
@@ -1349,17 +1349,17 @@ describe('Accessibility Tests', () => {
 
 ### 🎯 Minificazione CSS
 
-```bash
+\`\`\`bash
 # Usando PostCSS
 npx postcss css/admin-framework.css -o dist/admin-framework.min.css --use autoprefixer cssnano
 
 # Usando Sass
 sass --style=compressed css/admin-framework.scss dist/admin-framework.min.css
-```
+\`\`\`
 
 ### 🚀 CDN Setup
 
-```html
+\`\`\`html
 <!-- Versione di sviluppo -->
 <link rel="stylesheet" href="https://cdn.example.com/admin-framework/1.0.0/admin-framework.css">
 <script src="https://cdn.example.com/admin-framework/1.0.0/admin-framework.js"></script>
@@ -1367,7 +1367,7 @@ sass --style=compressed css/admin-framework.scss dist/admin-framework.min.css
 <!-- Versione minificata per produzione -->
 <link rel="stylesheet" href="https://cdn.example.com/admin-framework/1.0.0/admin-framework.min.css">
 <script src="https://cdn.example.com/admin-framework/1.0.0/admin-framework.min.js"></script>
-```
+\`\`\`
 
 ---
 
@@ -1375,7 +1375,7 @@ sass --style=compressed css/admin-framework.scss dist/admin-framework.min.css
 
 ### ⚛️ React
 
-```jsx
+\`\`\`jsx
 import { useEffect } from 'react';
 import 'admin-framework/dist/admin-framework.css';
 
@@ -1396,11 +1396,11 @@ function AdminModal({ isOpen, onClose, children }) {
         </div>
     );
 }
-```
+\`\`\`
 
 ### 🟢 Vue.js
 
-```vue
+\`\`\`vue
 <template>
     <div class="admin-modal-overlay" :class="{ active: isOpen }" ref="modal">
         <div class="admin-modal">
@@ -1421,7 +1421,7 @@ export default {
     }
 }
 </script>
-```
+\`\`\`
 
 ---
 
