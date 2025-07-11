@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componenti Avanzati - Admin Framework</title>
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <!-- Sidebar (simplified) -->
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar-header">
+                <div class="admin-sidebar-logo">AdminPanel</div>
+            </div>
+            <nav class="admin-sidebar-nav">
+                <div class="admin-nav-section">
+                    <button class="admin-nav-item">
+                        <svg class="admin-nav-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                        </svg>
+                        <span class="admin-nav-text">Dashboard</span>
+                    </button>
+                    <button class="admin-nav-item active">
+                        <svg class="admin-nav-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"/>
+                        </svg>
+                        <span class="admin-nav-text">Componenti</span>
+                    </button>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <header class="admin-header">
+                <div class="admin-header-left">
+                    <button class="admin-sidebar-toggle" onclick="toggleSidebar()">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div>
+                        <h1 class="admin-page-title mb-0">Componenti Avanzati</h1>
+                        <p class="admin-page-subtitle mb-0">Esempi di tutti i componenti UI disponibili</p>
+                    </div>
+                </div>
+                
+                <div class="admin-header-right">
+                    <!-- Dropdown Example -->
+                    <div class="admin-dropdown" id="userDropdown">
+                        <button class="admin-dropdown-toggle" onclick="toggleDropdown('userDropdown')">
+                            <div style="width: 32px; height: 32px; background: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 12px;">
+                                A
+                            </div>
+                            <span>Admin User</span>
+                            <svg class="admin-dropdown-arrow" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                        <div class="admin-dropdown-menu">
+                            <a href="#" class="admin-dropdown-item">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" style="margin-right: 8px;">
+                                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                                </svg>
+                                Profilo
+                            </a>
+                            <a href="#" class="admin-dropdown-item">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" style="margin-right: 8px;">
+                                    <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+                                </svg>
+                                Impostazioni
+                            </a>
+                            <div class="admin-dropdown-divider"></div>
+                            <a href="#" class="admin-dropdown-item">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" style="margin-right: 8px;">
+                                    <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"/>
+                                </svg>
+                                Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="admin-content">
+                <!-- Breadcrumbs -->
+                <nav class="admin-breadcrumb">
+                    <div class="admin-breadcrumb-item">
+                        <a href="#" class="admin-breadcrumb-link">Dashboard</a>
+                    </div>
+                    <svg class="admin-breadcrumb-separator" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <div class="admin-breadcrumb-item">
+                        <a href="#" class="admin-breadcrumb-link">UI</a>
+                    </div>
+                    <svg class="admin-breadcrumb-separator" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <div class="admin-breadcrumb-item">
+                        <span class="admin-breadcrumb-current">Componenti</span>
+                    </div>
+                </nav>
+
+                <!-- Tabs Example -->
+                <div class="admin-card mb-8">
+                    <div class="admin-card-header">
+                        <h2 class="admin-card-title">Tabs Navigation</h2>
+                        <p class="admin-card-subtitle">Esempio di navigazione a schede</p>
+                    </div>
+                    <div class="admin-card-body p-0">
+                        <div class="admin-tabs">
+                            <div class="admin-tab-list" style="padding: 0 24px;">
+                                <button class="admin-tab-button active" onclick="switchTab(event, 'tab1')">Generale</button>
+                                <button class="admin-tab-button" onclick="switchTab(event, 'tab2')">Sicurezza</button>
+                                <button class="admin-tab-button" onclick="switchTab(event, 'tab3')">Notifiche</button>
+                                <button class="admin-tab-button" onclick="switchTab(event, 'tab4')">Avanzate</button>
+                            </div>
+                        </div>
+                        <div class="admin-tab-content" style="padding: 24px;">
+                            <div id="tab1" class="admin-tab-panel active">
+                                <h3>Impostazioni Generali</h3>
+                                <p>Configura le impostazioni base del sistema.</p>
+                                <div class="admin-form-group">
+                                    <label class="admin-form-label">Nome Applicazione</label>
+                                    <input type="text" class="admin-form-input" value="Admin Dashboard">
+                                </div>
+                            </div>
+                            <div id="tab2" class="admin-tab-panel">
+                                <h3>Sicurezza</h3>
+                                <p>Gestisci le impostazioni di sicurezza e autenticazione.</p>
+                                <div class="admin-form-group">
+                                    <label class="d-flex align-center gap-2">
+                                        <div class="admin-toggle">
+                                            <input type="checkbox" class="admin-toggle-input" checked>
+                                            <span class="admin-toggle-slider"></span>
+                                        </div>
+                                        Autenticazione a due fattori
+                                    </label>
+                                </div>
+                            </div>
+                            <div id="tab3" class="admin-tab-panel">
+                                <h3>Notifiche</h3>
+                                <p>Configura le preferenze di notifica.</p>
+                                <div class="admin-form-group">
+                                    <label class="d-flex align-center gap-2">
+                                        <div class="admin-toggle">
+                                            <input type="checkbox" class="admin-toggle-input">
+                                            <span class="admin-toggle-slider"></span>
+                                        </div>
+                                        Notifiche email
+                                    </label>
+                                </div>
+                            </div>
+                            <div id="tab4" class="admin-tab-panel">
+                                <h3>Impostazioni Avanzate</h3>
+                                <p>Configurazioni avanzate per utenti esperti.</p>
+                                <div class="admin-alert admin-alert-warning">
+                                    <strong>Attenzione!</strong> Modifica queste impostazioni solo se sai cosa stai facendo.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Components Grid -->
+                <div class="d-grid grid-cols-2 gap-6">
+                    <!-- Modal Example -->
+                    <div class="admin-card">
+                        <div class="admin-card-header">
+                            <h3 class="admin-card-title">Modal Dialog</h3>
+                            <p class="admin-card-subtitle">Finestre di dialogo modali</p>
+                        </div>
+                        <div class="admin-card-body">
+                            <button class="admin-btn admin-btn-primary" onclick="openModal('exampleModal')">
+                                Apri Modal
+                            </button>
+                            <button class="admin-btn admin-btn-secondary ml-2" onclick="openModal('confirmModal')">
+                                Modal Conferma
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tooltips Example -->
+                    <div class="admin-card">
+                        <div class="admin-card-header">
+                            <h3 class="admin-card-title">Tooltips</h3>
+                            <p class="admin-card-subtitle">Suggerimenti al passaggio del mouse</p>
+                        </div>
+                        <div class="admin-card-body">
+                            <div class="d-flex gap-4 align-center">
+                                <div class="admin-tooltip admin-tooltip-top">
+                                    <button class="admin-btn admin-btn-secondary">Top</button>
+                                    <div class="admin-tooltip-content">Tooltip in alto</div>
+                                </div>
+                                <div class="admin-tooltip admin-tooltip-bottom">
+                                    <button class="admin-btn admin-btn-secondary">Bottom</button>
+                                    <div class="admin-tooltip-content">Tooltip in basso</div>
+                                </div>
+                                <div class="admin-tooltip admin-tooltip-left">
+                                    <button class="admin-btn admin-btn-secondary">Left</button>
+                                    <div class="admin-tooltip-content">Tooltip a sinistra</div>
+                                </div>
+                                <div class="admin-tooltip admin-tooltip-right">
+                                    <button class="admin-btn admin-btn-secondary">Right</button>
+                                    <div class="admin-tooltip-content">Tooltip a destra</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bars -->
+                    <div class="admin-card">
+                        <div class="admin-card-header">
+                            <h3 class="admin-card-title">Progress Bars</h3>
+                            <p class="admin-card-subtitle">Barre di progresso</p>
+                        </div>
+                        <div class="admin-card-body">
+                            <div class="mb-4">
+                                <div class="admin-progress">
+                                    <div class="admin-progress-bar" style="width: 75%"></div>
+                                </div>
+                                <div class="admin-progress-text">75% Completato</div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="admin-progress">
+                                    <div class="admin-progress-bar success" style="width: 100%"></div>
+                                </div>
+                                <div class="admin-progress-text">Completato</div>
+                            </div>
+                            <div>
+                                <div class="admin-progress">
+                                    <div class="admin-progress-bar warning" style="width: 45%"></div>
+                                </div>
+                                <div class="admin-progress-text">45% In corso</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Loading States -->
+                    <div class="admin-card">
+                        <div class="admin-card-header">
+                            <h3 class="admin-card-title">Loading States</h3>
+                            <p class="admin-card-subtitle">Stati di caricamento</p>
+                        </div>
+                        <div class="admin-card-body">
+                            <div class="mb-4">
+                                <div class="admin-loading">
+                                    <div class="admin-spinner"></div>
+                                    <span>Caricamento...</span>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="admin-loading">
+                                    <div class="admin-spinner admin-spinner-lg"></div>
+                                    <span>Caricamento grande</span>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <h4>Skeleton Loading</h4>
+                                <div class="d-flex align-center gap-3 mb-3">
+                                    <div class="admin-skeleton admin-skeleton-avatar"></div>
+                                    <div style="flex: 1;">
+                                        <div class="admin-skeleton admin-skeleton-text"></div>
+                                        <div class="admin-skeleton admin-skeleton-text"></div>
+                                    </div>
+                                </div>
+                                <div class="admin-skeleton admin-skeleton-button"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion Example -->
+                <div class="admin-card mt-6">
+                    <div class="admin-card-header">
+                        <h3 class="admin-card-title">Accordion</h3>
+                        <p class="admin-card-subtitle">Contenuti espandibili</p>
+                    </div>
+                    <div class="admin-card-body p-0">
+                        <div class="admin-accordion">
+                            <div class="admin-accordion-item">
+                                <button class="admin-accordion-header" onclick="toggleAccordion(this)">
+                                    <span>Domanda Frequente 1</span>
+                                    <svg class="admin-accordion-icon" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                    </svg>
+                                </button>
+                                <div class="admin-accordion-content">
+                                    <div class="admin-accordion-body">
+                                        <p>Questa è la risposta alla prima domanda frequente. Puoi inserire qui qualsiasi contenuto HTML.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="admin-accordion-item">
+                                <button class="admin-accordion-header" onclick="toggleAccordion(this)">
+                                    <span>Domanda Frequente 2</span>
+                                    <svg class="admin-accordion-icon" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                    </svg>
+                                </button>
+                                <div class="admin-accordion-content">
+                                    <div class="admin-accordion-body">
+                                        <p>Questa è la risposta alla seconda domanda. Gli accordion sono utili per organizzare contenuti lunghi in sezioni collassabili.</p>
+                                        <ul>
+                                            <li>Punto 1</li>
+                                            <li>Punto 2</li>
+                                            <li>Punto 3</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="admin-accordion-item">
+                                <button class="admin-accordion-header" onclick="toggleAccordion(this)">
+                                    <span>Domanda Frequente 3</span>
+                                    <svg class="admin-accordion-icon" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                    </svg>
+                                </button>
+                                <div class="admin-accordion-content">
+                                    <div class="admin-accordion-body">
+                                        <p>Terza risposta con contenuto più complesso.</p>
+                                        <div class="admin-alert admin-alert-info">
+                                            <strong>Info:</strong> Puoi anche inserire altri componenti all'interno degli accordion.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toast Notifications Button -->
+                <div class="admin-card mt-6">
+                    <div class="admin-card-header">
+                        <h3 class="admin-card-title">Toast Notifications</h3>
+                        <p class="admin-card-subtitle">Notifiche temporanee</p>
+                    </div>
+                    <div class="admin-card-body">
+                        <div class="d-flex gap-3">
+                            <button class="admin-btn admin-btn-success" onclick="showToast('success', 'Successo!', 'Operazione completata con successo.')">
+                                Success Toast
+                            </button>
+                            <button class="admin-btn admin-btn-warning" onclick="showToast('warning', 'Attenzione!', 'Questa è una notifica di avviso.')">
+                                Warning Toast
+                            </button>
+                            <button class="admin-btn admin-btn-danger" onclick="showToast('error', 'Errore!', 'Si è verificato un errore.')">
+                                Error Toast
+                            </button>
+                            <button class="admin-btn admin-btn-secondary" onclick="showToast('info', 'Informazione', 'Questa è una notifica informativa.')">
+                                Info Toast
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div class="admin-modal-overlay" id="exampleModal">
+        <div class="admin-modal">
+            <div class="admin-modal-header">
+                <h3 class="admin-modal-title">Esempio Modal</h3>
+                <button class="admin-modal-close" onclick="closeModal('exampleModal')">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="admin-modal-body">
+                <p>Questo è un esempio di modal dialog. Puoi inserire qui qualsiasi contenuto HTML.</p>
+                <div class="admin-form-group">
+                    <label class="admin-form-label">Campo di esempio</label>
+                    <input type="text" class="admin-form-input" placeholder="Inserisci del testo">
+                </div>
+            </div>
+            <div class="admin-modal-footer">
+                <button class="admin-btn admin-btn-secondary" onclick="closeModal('exampleModal')">Annulla</button>
+                <button class="admin-btn admin-btn-primary">Salva</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="admin-modal-overlay" id="confirmModal">
+        <div class="admin-modal" style="max-width: 400px;">
+            <div class="admin-modal-header">
+                <h3 class="admin-modal-title">Conferma Azione</h3>
+                <button class="admin-modal-close" onclick="closeModal('confirmModal')">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="admin-modal-body">
+                <div class="d-flex align-center gap-3 mb-4">
+                    <div style="width: 48px; height: 48px; background: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <svg width="24" height="24" fill="#d97706" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="mb-2">Sei sicuro?</h4>
+                        <p class="mb-0 text-gray-600">Questa azione non può essere annullata.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="admin-modal-footer">
+                <button class="admin-btn admin-btn-secondary" onclick="closeModal('confirmModal')">Annulla</button>
+                <button class="admin-btn admin-btn-danger" onclick="closeModal('confirmModal')">Conferma</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="admin-toast-container" id="toastContainer"></div>
+
+    <script>
+        // Sidebar Toggle
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            
+            if (window.innerWidth <= 768) {
+                sidebar.classList.toggle('mobile-open');
+                overlay.classList.toggle('active');
+            } else {
+                sidebar.classList.toggle('collapsed');
+            }
+        }
+
+        // Dropdown Toggle
+        function toggleDropdown(id) {
+            const dropdown = document.getElementById(id);
+            const isActive = dropdown.classList.contains('active');
+            
+            // Close all dropdowns
+            document.querySelectorAll('.admin-dropdown').forEach(d => {
+                d.classList.remove('active');
+            });
+            
+            // Toggle current dropdown
+            if (!isActive) {
+                dropdown.classList.add('active');
+            }
+        }
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.admin-dropdown')) {
+                document.querySelectorAll('.admin-dropdown').forEach(d => {
+                    d.classList.remove('active');
+                });
+            }
+        });
+
+        // Modal Functions
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal when clicking overlay
+        document.querySelectorAll('.admin-modal-overlay').forEach(overlay => {
+            overlay.addEventListener('click', function(event) {
+                if (event.target === overlay) {
+                    closeModal(overlay.id);
+                }
+            });
+        });
+
+        // Tab Functions
+        function switchTab(event, tabId) {
+            // Remove active class from all tabs and panels
+            document.querySelectorAll('.admin-tab-button').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.admin-tab-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            
+            // Add active class to clicked tab and corresponding panel
+            event.target.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        // Accordion Functions
+        function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+            const isActive = header.classList.contains('active');
+            
+            // Close all accordion items
+            document.querySelectorAll('.admin-accordion-header').forEach(h => {
+                h.classList.remove('active');
+                h.nextElementSibling.classList.remove('active');
+            });
+            
+            // Toggle current item
+            if (!isActive) {
+                header.classList.add('active');
+                content.classList.add('active');
+            }
+        }
+
+        // Toast Functions
+        function showToast(type, title, message) {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = `admin-toast ${type}`;
+            
+            const iconMap = {
+                success: '<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>',
+                warning: '<path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>',
+                error: '<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>',
+                info: '<path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>'
+            };
+            
+            toast.innerHTML = `
+                <svg class="admin-toast-icon" fill="currentColor" viewBox="0 0 20 20">
+                    ${iconMap[type]}
+                </svg>
+                <div class="admin-toast-content">
+                    <div class="admin-toast-title">${title}</div>
+                    <p class="admin-toast-message">${message}</p>
+                </div>
+                <button class="admin-toast-close" onclick="removeToast(this)">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+            `;
+            
+            container.appendChild(toast);
+            
+            // Show toast
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 100);
+            
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                removeToast(toast.querySelector('.admin-toast-close'));
+            }, 5000);
+        }
+
+        function removeToast(button) {
+            const toast = button.closest('.admin-toast');
+            toast.classList.remove('show');
+            setTimeout(() => {
+                toast.remove();
+            }, 300);
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(event) {
+            // ESC to close modals
+            if (event.key === 'Escape') {
+                document.querySelectorAll('.admin-modal-overlay.active').forEach(modal => {
+                    closeModal(modal.id);
+                });
+                
+                // Close dropdowns
+                document.querySelectorAll('.admin-dropdown.active').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

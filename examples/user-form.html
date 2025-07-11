@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Utente - Admin Framework</title>
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <!-- Sidebar (simplified) -->
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar-header">
+                <div class="admin-sidebar-logo">AdminPanel</div>
+            </div>
+            <nav class="admin-sidebar-nav">
+                <div class="admin-nav-section">
+                    <button class="admin-nav-item">
+                        <svg class="admin-nav-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                        </svg>
+                        <span class="admin-nav-text">Dashboard</span>
+                    </button>
+                    <button class="admin-nav-item active">
+                        <svg class="admin-nav-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span class="admin-nav-text">Utenti</span>
+                    </button>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <header class="admin-header">
+                <div class="admin-header-left">
+                    <button class="admin-sidebar-toggle">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div>
+                        <h1 class="admin-page-title mb-0">Gestione Utente</h1>
+                        <p class="admin-page-subtitle mb-0">Crea o modifica un utente del sistema</p>
+                    </div>
+                </div>
+            </header>
+
+            <div class="admin-content">
+                <!-- Alert Success -->
+                <div class="admin-alert admin-alert-success" style="display: none;" id="successAlert">
+                    <strong>Successo!</strong> L'utente è stato salvato correttamente.
+                </div>
+
+                <!-- User Form -->
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h2 class="admin-card-title">Informazioni Utente</h2>
+                        <p class="admin-card-subtitle">Compila tutti i campi obbligatori per creare o modificare l'utente</p>
+                    </div>
+                    
+                    <form class="admin-card-body" onsubmit="handleSubmit(event)">
+                        <div class="d-grid grid-cols-2 gap-6">
+                            <!-- Left Column -->
+                            <div>
+                                <div class="admin-form-group">
+                                    <label class="admin-form-label" for="firstName">Nome *</label>
+                                    <input 
+                                        type="text" 
+                                        id="firstName" 
+                                        class="admin-form-input" 
+                                        placeholder="Inserisci il nome"
+                                        required
+                                    >
+                                    <div class="admin-form-help">Il nome dell'utente</div>
+                                </div>
+
+                                <div class="admin-form-group">
+                                    <label class="admin-form-label" for="lastName">Cognome *</label>
+                                    <input 
+                                        type="text" 
+                                        id="lastName" 
+                                        class="admin-form-input" 
+                                        placeholder="Inserisci il cognome"
+                                        required
+                                    >
+                                </div>
+
+                                <div class="admin-form-group">
+                                    <label class="admin-form-label" for="email">Email *</label>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        class="admin-form-input" 
+                                        placeholder="utente@esempio.com"
+                                        required
+                                    >
+                                    <div class="admin-form-help">L'email deve essere unica nel sistema</div>
+                                </div>
+
+                                <div class="admin-form-group">
+                                    <label class="admin-form-label" for="phone">Telefono</label>
+                                    <input 
+                                        type="tel" 
+                                        id="phone" 
+                                        class="admin-form-input" 
+                                        placeholder="+39 123 456 7890"
+                                    >
+                                </div>
+
+                                <div class="admin-form-group">
+                                    <label class="admin-form-label" for="birthDate">Data di Nascita</label>
+                                    <input 
+                                        type="date" 
+                                        id="birthDate" 
+                                        class="admin-form-input"
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- Right Column -->
+                            <div>
+                                <div class="admin-form-group">
+                                    <label class="admin-form-label" for="role">Ruolo *</label>
+                                    <select id="role" class="admin-form-input admin-form-select" required>
+                                        <option value="">Seleziona un ruolo</option>
+                                        <option value="admin">Amministratore</option>
+                                        <option value="moderator">Moderatore</option>
+                                        <option value="user">Utente</option>
+                                        <option value="guest">Ospite</option>
+                                    </select>
+                                </div>
+
+                                <div class="admin-form-group">
+                                    <label class="admin-form-label" for="status">Stato Account</label>
+                                    <select id="status" class="admin-form-input admin-form-select">
+                                        <option value="active">Attivo</option>
+                                        <option value="suspended">Sospeso</option>
+                                        <option value="inactive">Inattivo</option>
+                                    </select>
+                                </div>
+
+                                <div class="admin-form-group">
+                                    <label class="admin-form-label" for="department">Dipartimento</label>
+                                    <select id="department" class="admin-form-input admin-form-select">
+                                        <option value="">Seleziona dipartimento</option>
+                                        <option value="it">IT</option>
+                                        <option value="hr">Risorse Umane</option>
+                                        <option value="sales">Vendite</option>
+                                        <option value="marketing">Marketing</option>
+                                        <option value="finance">Finanza</option>
+                                    </select>
+                                </div>
+
+                                <div class="admin-form-group">
+                                    <label class="admin-form-label" for="password">Password</label>
+                                    <input 
+                                        type="password" 
+                                        id="password" 
+                                        class="admin-form-input" 
+                                        placeholder="Lascia vuoto per mantenere la password attuale"
+                                    >
+                                    <div class="admin-form-help">Minimo 8 caratteri, almeno una maiuscola e un numero</div>
+                                </div>
+
+                                <div class="admin-form-group">
+                                    <label class="admin-form-label" for="confirmPassword">Conferma Password</label>
+                                    <input 
+                                        type="password" 
+                                        id="confirmPassword" 
+                                        class="admin-form-input" 
+                                        placeholder="Conferma la password"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Full Width Fields -->
+                        <div class="admin-form-group">
+                            <label class="admin-form-label" for="bio">Biografia</label>
+                            <textarea 
+                                id="bio" 
+                                class="admin-form-input admin-form-textarea" 
+                                placeholder="Breve descrizione dell'utente..."
+                                rows="4"
+                            ></textarea>
+                        </div>
+
+                        <!-- Permissions Section -->
+                        <div class="admin-form-group">
+                            <label class="admin-form-label">Permessi</label>
+                            <div class="d-grid grid-cols-2 gap-4 mt-3">
+                                <label class="d-flex align-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="canRead" checked>
+                                    <span>Lettura</span>
+                                </label>
+                                <label class="d-flex align-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="canWrite">
+                                    <span>Scrittura</span>
+                                </label>
+                                <label class="d-flex align-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="canDelete">
+                                    <span>Eliminazione</span>
+                                </label>
+                                <label class="d-flex align-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="canManageUsers">
+                                    <span>Gestione Utenti</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Notification Preferences -->
+                        <div class="admin-form-group">
+                            <label class="admin-form-label">Preferenze Notifiche</label>
+                            <div class="d-flex flex-column gap-2 mt-3">
+                                <label class="d-flex align-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="emailNotifications" checked>
+                                    <span>Notifiche Email</span>
+                                </label>
+                                <label class="d-flex align-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="smsNotifications">
+                                    <span>Notifiche SMS</span>
+                                </label>
+                                <label class="d-flex align-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="pushNotifications" checked>
+                                    <span>Notifiche Push</span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="admin-card-footer">
+                        <div class="d-flex justify-between align-center">
+                            <button type="button" class="admin-btn admin-btn-secondary" onclick="window.history.back()">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                Annulla
+                            </button>
+                            <div class="d-flex gap-3">
+                                <button type="button" class="admin-btn admin-btn-warning" onclick="resetForm()">
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Reset
+                                </button>
+                                <button type="submit" class="admin-btn admin-btn-primary" form="userForm">
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Salva Utente
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Basic form validation
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (password && password !== confirmPassword) {
+                alert('Le password non corrispondono!');
+                return;
+            }
+            
+            // Show success message
+            const successAlert = document.getElementById('successAlert');
+            successAlert.style.display = 'block';
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Hide alert after 3 seconds
+            setTimeout(() => {
+                successAlert.style.display = 'none';
+            }, 3000);
+        }
+
+        function resetForm() {
+            if (confirm('Sei sicuro di voler resettare tutti i campi?')) {
+                document.querySelector('form').reset();
+            }
+        }
+
+        // Add form attribute to form element
+        document.querySelector('form').setAttribute('id', 'userForm');
+    </script>
+</body>
+</html>
