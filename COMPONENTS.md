@@ -8,7 +8,7 @@ Il framework Admin CSS è una soluzione completa per creare dashboard di amminis
 
 ### ⚡ Quick Start
 
-\`\`\`html
+```html
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -31,7 +31,7 @@ Il framework Admin CSS è una soluzione completa per creare dashboard di amminis
     <script src="js/admin-framework.js"></script>
 </body>
 </html>
-\`\`\`
+```
 
 ---
 
@@ -41,7 +41,7 @@ I modal sono finestre di dialogo che si sovrappongono al contenuto principale pe
 
 ### 📋 Esempio Base
 
-\`\`\`html
+```html
 <!-- Pulsante per aprire il modal -->
 <button class="admin-btn admin-btn-primary" onclick="openModal('basicModal')">
     <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" style="margin-right: 8px;">
@@ -95,7 +95,7 @@ I modal sono finestre di dialogo che si sovrappongono al contenuto principale pe
         </div>
     </div>
 </div>
-\`\`\`
+```
 
 **🎨 Anteprima Renderizzata:**
 
@@ -162,7 +162,7 @@ I modal sono finestre di dialogo che si sovrappongono al contenuto principale pe
 
 ### 🔥 Modal di Conferma
 
-\`\`\`html
+```html
 <!-- Modal di conferma eliminazione -->
 <div class="admin-modal-overlay" id="deleteModal">
     <div class="admin-modal admin-modal-sm">
@@ -198,7 +198,7 @@ I modal sono finestre di dialogo che si sovrappongono al contenuto principale pe
         </div>
     </div>
 </div>
-\`\`\`
+```
 
 **🎨 Anteprima Renderizzata:**
 
@@ -244,7 +244,7 @@ I modal sono finestre di dialogo che si sovrappongono al contenuto principale pe
 
 ### 🎛️ Funzioni JavaScript
 
-\`\`\`javascript
+```javascript
 // Aprire modal
 function openModal(modalId) {
     const modal = document.getElementById(modalId);
@@ -277,7 +277,7 @@ function saveUser() {
         showToast('error', 'Errore!', 'Compila tutti i campi obbligatori.');
     }
 }
-\`\`\`
+```
 
 ---
 
@@ -287,7 +287,7 @@ I dropdown forniscono un menu di opzioni che appare al click di un pulsante.
 
 ### 🎯 Dropdown Base
 
-\`\`\`html
+```html
 <div class="admin-dropdown" id="actionsDropdown">
     <button class="admin-dropdown-toggle">
         <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" style="margin-right: 8px;">
@@ -322,7 +322,7 @@ I dropdown forniscono un menu di opzioni che appare al click di un pulsante.
         </a>
     </div>
 </div>
-\`\`\`
+```
 
 **🎨 Anteprima Renderizzata:**
 
@@ -366,7 +366,7 @@ I dropdown forniscono un menu di opzioni che appare al click di un pulsante.
 
 ### 👤 Dropdown Utente
 
-\`\`\`html
+```html
 <div class="admin-dropdown" id="userDropdown">
     <button class="admin-dropdown-toggle">
         <img src="/placeholder.svg?height=32&width=32" alt="Avatar" class="admin-avatar">
@@ -413,7 +413,7 @@ I dropdown forniscono un menu di opzioni che appare al click di un pulsante.
         </a>
     </div>
 </div>
-\`\`\`
+```
 
 **🎨 Anteprima Renderizzata:**
 
@@ -470,7 +470,7 @@ I tooltip mostrano informazioni aggiuntive al passaggio del mouse.
 
 ### 🎯 Tooltip Base
 
-\`\`\`html
+```html
 <!-- Tooltip in alto (default) -->
 <div class="admin-tooltip admin-tooltip-top">
     <button class="admin-btn admin-btn-secondary">
@@ -501,7 +501,7 @@ I tooltip mostrano informazioni aggiuntive al passaggio del mouse.
         Clicca per maggiori informazioni su questa funzionalità
     </div>
 </div>
-\`\`\`
+```
 
 **🎨 Anteprima Renderizzata:**
 
@@ -545,7 +545,7 @@ I tooltip mostrano informazioni aggiuntive al passaggio del mouse.
 
 ### 🎨 Tooltip Colorati
 
-\`\`\`html
+```html
 <!-- Tooltip Success -->
 <div class="admin-tooltip admin-tooltip-top admin-tooltip-success">
     <button class="admin-btn admin-btn-success">Salva</button>
@@ -569,7 +569,7 @@ I tooltip mostrano informazioni aggiuntive al passaggio del mouse.
         Attenzione: questa azione è irreversibile
     </div>
 </div>
-\`\`\`
+```
 
 **🎨 Anteprima Renderizzata:**
 
@@ -612,7 +612,7 @@ Le notifiche toast mostrano messaggi temporanei all'utente.
 
 ### 🎯 Tipi di Toast
 
-\`\`\`javascript
+```javascript
 // Toast di successo
 showToast('success', 'Operazione Completata!', 'I dati sono stati salvati correttamente nel database.');
 
@@ -627,7 +627,7 @@ showToast('info', 'Nuova Funzionalità!', 'È disponibile una nuova versione del
 
 // Toast personalizzato con durata
 showToast('success', 'Upload Completato!', 'Il file è stato caricato con successo.', 3000);
-\`\`\`
+```
 
 **🎨 Anteprima Renderizzata:**
 
@@ -689,7 +689,7 @@ showToast('success', 'Upload Completato!', 'Il file è stato caricato con succes
 
 ### 🎛️ Funzione Toast Avanzata
 
-\`\`\`javascript
+```javascript
 function showToast(type, title, message, duration = 5000) {
     const container = document.getElementById('toastContainer') || createToastContainer();
     const toast = document.createElement('div');
@@ -739,7 +739,7 @@ function createToastContainer() {
     document.body.appendChild(container);
     return container;
 }
-\`\`\`
+```
 
 ---
 
@@ -749,7 +749,7 @@ Le schede organizzano il contenuto in sezioni navigabili.
 
 ### 🎯 Tabs Base
 
-\`\`\`html
+```html
 <div class="admin-card">
     <div class="admin-card-header">
         <h3 class="admin-card-title">Impostazioni Utente</h3>
@@ -819,7 +819,7 @@ Le schede organizzano il contenuto in sezioni navigabili.
         </div>
     </div>
 </div>
-\`\`\`
+```
 
 **🎨 Anteprima Renderizzata:**
 
