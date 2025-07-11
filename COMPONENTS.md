@@ -8,7 +8,7 @@ Il framework Admin CSS è una soluzione completa per creare dashboard di amminis
 
 ### ⚡ Quick Start
 
-```html
+\`\`\`html
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -31,7 +31,7 @@ Il framework Admin CSS è una soluzione completa per creare dashboard di amminis
     <script src="js/admin-framework.js"></script>
 </body>
 </html>
-```
+\`\`\`
 
 ---
 
@@ -41,7 +41,7 @@ I modal sono finestre di dialogo che si sovrappongono al contenuto principale pe
 
 ### 📋 Esempio Base
 
-```html
+\`\`\`html
 <!-- Pulsante per aprire il modal -->
 <button class="admin-btn admin-btn-primary" onclick="openModal('basicModal')">
     <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" style="margin-right: 8px;">
@@ -95,11 +95,74 @@ I modal sono finestre di dialogo che si sovrappongono al contenuto principale pe
         </div>
     </div>
 </div>
-```
+\`\`\`
+
+**🎨 Anteprima Renderizzata:**
+
+<div style="position: relative; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin: 16px 0;">
+    <!-- Pulsante -->
+    <div style="margin-bottom: 20px;">
+        <button style="background: #2563eb; color: white; border: none; padding: 10px 16px; border-radius: 6px; font-weight: 500; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"/>
+            </svg>
+            Nuovo Utente
+        </button>
+    </div>
+    
+    <!-- Modal Preview -->
+    <div style="background: rgba(0,0,0,0.5); border-radius: 8px; padding: 40px; position: relative;">
+        <div style="background: white; border-radius: 12px; max-width: 500px; margin: 0 auto; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);">
+            <!-- Header -->
+            <div style="padding: 24px 24px 0; border-bottom: 1px solid #e5e7eb; display: flex; justify-content: space-between; align-items: center;">
+                <h3 style="margin: 0; font-size: 18px; font-weight: 600; color: #111827;">Aggiungi Nuovo Utente</h3>
+                <button style="background: none; border: none; color: #6b7280; cursor: pointer; padding: 4px;">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Body -->
+            <div style="padding: 24px;">
+                <div style="margin-bottom: 16px;">
+                    <label style="display: block; font-weight: 500; color: #374151; margin-bottom: 6px;">Nome Completo</label>
+                    <input style="width: 100%; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px;" placeholder="Inserisci nome e cognome" />
+                </div>
+                <div style="margin-bottom: 16px;">
+                    <label style="display: block; font-weight: 500; color: #374151; margin-bottom: 6px;">Email</label>
+                    <input style="width: 100%; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px;" placeholder="utente@esempio.com" />
+                </div>
+                <div style="margin-bottom: 16px;">
+                    <label style="display: block; font-weight: 500; color: #374151; margin-bottom: 6px;">Ruolo</label>
+                    <select style="width: 100%; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px;">
+                        <option>Seleziona ruolo</option>
+                        <option>Amministratore</option>
+                        <option>Editor</option>
+                        <option>Visualizzatore</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div style="padding: 16px 24px 24px; display: flex; gap: 12px; justify-content: flex-end; border-top: 1px solid #e5e7eb;">
+                <button style="background: #f3f4f6; color: #374151; border: none; padding: 8px 16px; border-radius: 6px; font-weight: 500; cursor: pointer;">
+                    Annulla
+                </button>
+                <button style="background: #2563eb; color: white; border: none; padding: 8px 16px; border-radius: 6px; font-weight: 500; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                    </svg>
+                    Salva Utente
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
 ### 🔥 Modal di Conferma
 
-```html
+\`\`\`html
 <!-- Modal di conferma eliminazione -->
 <div class="admin-modal-overlay" id="deleteModal">
     <div class="admin-modal admin-modal-sm">
@@ -135,11 +198,53 @@ I modal sono finestre di dialogo che si sovrappongono al contenuto principale pe
         </div>
     </div>
 </div>
-```
+\`\`\`
+
+**🎨 Anteprima Renderizzata:**
+
+<div style="position: relative; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin: 16px 0;">
+    <div style="background: rgba(0,0,0,0.5); border-radius: 8px; padding: 40px; position: relative;">
+        <div style="background: white; border-radius: 12px; max-width: 400px; margin: 0 auto; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);">
+            <!-- Header -->
+            <div style="padding: 20px 20px 0; display: flex; justify-content: space-between; align-items: center;">
+                <h3 style="margin: 0; font-size: 18px; font-weight: 600; color: #dc2626;">Conferma Eliminazione</h3>
+                <button style="background: none; border: none; color: #6b7280; cursor: pointer; font-size: 20px;">×</button>
+            </div>
+            
+            <!-- Body -->
+            <div style="padding: 20px;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                    <div style="width: 48px; height: 48px; background: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <svg width="24" height="24" fill="#d97706" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="margin: 0 0 8px 0; font-size: 16px; font-weight: 600;">Sei sicuro?</h4>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Questa azione eliminerà definitivamente l'utente <strong>Mario Rossi</strong> e non potrà essere annullata.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div style="padding: 16px 20px 20px; display: flex; gap: 12px; justify-content: flex-end;">
+                <button style="background: #f3f4f6; color: #374151; border: none; padding: 8px 16px; border-radius: 6px; font-weight: 500; cursor: pointer;">
+                    Annulla
+                </button>
+                <button style="background: #dc2626; color: white; border: none; padding: 8px 16px; border-radius: 6px; font-weight: 500; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                    </svg>
+                    Elimina Definitivamente
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
 ### 🎛️ Funzioni JavaScript
 
-```javascript
+\`\`\`javascript
 // Aprire modal
 function openModal(modalId) {
     const modal = document.getElementById(modalId);
@@ -172,7 +277,7 @@ function saveUser() {
         showToast('error', 'Errore!', 'Compila tutti i campi obbligatori.');
     }
 }
-```
+\`\`\`
 
 ---
 
@@ -182,7 +287,7 @@ I dropdown forniscono un menu di opzioni che appare al click di un pulsante.
 
 ### 🎯 Dropdown Base
 
-```html
+\`\`\`html
 <div class="admin-dropdown" id="actionsDropdown">
     <button class="admin-dropdown-toggle">
         <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" style="margin-right: 8px;">
@@ -217,11 +322,51 @@ I dropdown forniscono un menu di opzioni che appare al click di un pulsante.
         </a>
     </div>
 </div>
-```
+\`\`\`
+
+**🎨 Anteprima Renderizzata:**
+
+<div style="position: relative; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin: 16px 0;">
+    <div style="position: relative; display: inline-block;">
+        <!-- Dropdown Button -->
+        <button style="background: white; border: 1px solid #d1d5db; padding: 8px 12px; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-size: 14px;">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"/>
+            </svg>
+            Azioni
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+            </svg>
+        </button>
+        
+        <!-- Dropdown Menu -->
+        <div style="position: absolute; top: 100%; left: 0; margin-top: 4px; background: white; border: 1px solid #e5e7eb; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); min-width: 160px; z-index: 10;">
+            <a href="#" style="display: flex; align-items: center; gap: 8px; padding: 8px 12px; text-decoration: none; color: #374151; font-size: 14px; border-bottom: 1px solid #f3f4f6;">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+                </svg>
+                Modifica
+            </a>
+            <a href="#" style="display: flex; align-items: center; gap: 8px; padding: 8px 12px; text-decoration: none; color: #374151; font-size: 14px; border-bottom: 1px solid #f3f4f6;">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M8 2a1 1 0 000 2h2a1 1 0 100-2H8z"/>
+                </svg>
+                Duplica
+            </a>
+            <div style="height: 1px; background: #e5e7eb; margin: 4px 0;"></div>
+            <a href="#" style="display: flex; align-items: center; gap: 8px; padding: 8px 12px; text-decoration: none; color: #dc2626; font-size: 14px;">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                </svg>
+                Elimina
+            </a>
+        </div>
+    </div>
+</div>
 
 ### 👤 Dropdown Utente
 
-```html
+\`\`\`html
 <div class="admin-dropdown" id="userDropdown">
     <button class="admin-dropdown-toggle">
         <img src="/placeholder.svg?height=32&width=32" alt="Avatar" class="admin-avatar">
@@ -268,7 +413,54 @@ I dropdown forniscono un menu di opzioni che appare al click di un pulsante.
         </a>
     </div>
 </div>
-```
+\`\`\`
+
+**🎨 Anteprima Renderizzata:**
+
+<div style="position: relative; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin: 16px 0;">
+    <div style="position: relative; display: inline-block;">
+        <!-- User Dropdown Button -->
+        <button style="background: white; border: 1px solid #d1d5db; padding: 8px 12px; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-size: 14px;">
+            <div style="width: 32px; height: 32px; background: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 12px;">
+                MR
+            </div>
+            <div style="text-align: left;">
+                <div style="font-weight: 500; color: #111827;">Mario Rossi</div>
+                <div style="font-size: 12px; color: #6b7280;">Amministratore</div>
+            </div>
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+            </svg>
+        </button>
+        
+        <!-- User Dropdown Menu -->
+        <div style="position: absolute; top: 100%; right: 0; margin-top: 4px; background: white; border: 1px solid #e5e7eb; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); min-width: 200px; z-index: 10;">
+            <div style="padding: 12px; border-bottom: 1px solid #e5e7eb;">
+                <div style="font-weight: 600; color: #111827;">Mario Rossi</div>
+                <div style="font-size: 12px; color: #6b7280;">mario.rossi@esempio.com</div>
+            </div>
+            <a href="#" style="display: flex; align-items: center; gap: 8px; padding: 8px 12px; text-decoration: none; color: #374151; font-size: 14px; border-bottom: 1px solid #f3f4f6;">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                </svg>
+                Il Mio Profilo
+            </a>
+            <a href="#" style="display: flex; align-items: center; gap: 8px; padding: 8px 12px; text-decoration: none; color: #374151; font-size: 14px; border-bottom: 1px solid #f3f4f6;">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"/>
+                </svg>
+                Impostazioni
+            </a>
+            <div style="height: 1px; background: #e5e7eb; margin: 4px 0;"></div>
+            <a href="#" style="display: flex; align-items: center; gap: 8px; padding: 8px 12px; text-decoration: none; color: #374151; font-size: 14px;">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z"/>
+                </svg>
+                Logout
+            </a>
+        </div>
+    </div>
+</div>
 
 ---
 
@@ -278,7 +470,7 @@ I tooltip mostrano informazioni aggiuntive al passaggio del mouse.
 
 ### 🎯 Tooltip Base
 
-```html
+\`\`\`html
 <!-- Tooltip in alto (default) -->
 <div class="admin-tooltip admin-tooltip-top">
     <button class="admin-btn admin-btn-secondary">
@@ -309,11 +501,51 @@ I tooltip mostrano informazioni aggiuntive al passaggio del mouse.
         Clicca per maggiori informazioni su questa funzionalità
     </div>
 </div>
-```
+\`\`\`
+
+**🎨 Anteprima Renderizzata:**
+
+<div style="position: relative; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 40px 20px; margin: 16px 0;">
+    <div style="display: flex; gap: 20px; align-items: center; justify-content: center;">
+        <!-- Tooltip Top -->
+        <div style="position: relative;">
+            <button style="background: #6b7280; color: white; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/>
+                </svg>
+            </button>
+            <div style="position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); margin-bottom: 8px; background: #1f2937; color: white; padding: 8px 12px; border-radius: 6px; font-size: 12px; white-space: nowrap; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                Questo pulsante mostra informazioni aggiuntive
+                <div style="position: absolute; top: 100%; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 6px solid #1f2937;"></div>
+            </div>
+        </div>
+        
+        <!-- Tooltip Right -->
+        <div style="position: relative;">
+            <span style="background: #3b82f6; color: white; padding: 4px 8px; border-radius: 50%; font-size: 12px; font-weight: 600; cursor: help;">?</span>
+            <div style="position: absolute; top: 50%; left: 100%; transform: translateY(-50%); margin-left: 8px; background: #1f2937; color: white; padding: 8px 12px; border-radius: 6px; font-size: 12px; white-space: nowrap; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                <strong>Informazione Importante</strong><br>
+                Questo campo è obbligatorio per completare la registrazione.
+                <div style="position: absolute; top: 50%; right: 100%; transform: translateY(-50%); width: 0; height: 0; border-top: 6px solid transparent; border-bottom: 6px solid transparent; border-right: 6px solid #1f2937;"></div>
+            </div>
+        </div>
+        
+        <!-- Tooltip Bottom -->
+        <div style="position: relative;">
+            <svg width="20" height="20" fill="#9ca3af" viewBox="0 0 20 20" style="cursor: help;">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"/>
+            </svg>
+            <div style="position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 8px; background: #1f2937; color: white; padding: 8px 12px; border-radius: 6px; font-size: 12px; white-space: nowrap; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                Clicca per maggiori informazioni su questa funzionalità
+                <div style="position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-bottom: 6px solid #1f2937;"></div>
+            </div>
+        </div>
+    </div>
+</div>
 
 ### 🎨 Tooltip Colorati
 
-```html
+\`\`\`html
 <!-- Tooltip Success -->
 <div class="admin-tooltip admin-tooltip-top admin-tooltip-success">
     <button class="admin-btn admin-btn-success">Salva</button>
@@ -337,7 +569,40 @@ I tooltip mostrano informazioni aggiuntive al passaggio del mouse.
         Attenzione: questa azione è irreversibile
     </div>
 </div>
-```
+\`\`\`
+
+**🎨 Anteprima Renderizzata:**
+
+<div style="position: relative; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 40px 20px; margin: 16px 0;">
+    <div style="display: flex; gap: 20px; align-items: center; justify-content: center;">
+        <!-- Success Tooltip -->
+        <div style="position: relative;">
+            <button style="background: #10b981; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer;">Salva</button>
+            <div style="position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); margin-bottom: 8px; background: #10b981; color: white; padding: 8px 12px; border-radius: 6px; font-size: 12px; white-space: nowrap; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                I dati verranno salvati nel database
+                <div style="position: absolute; top: 100%; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 6px solid #10b981;"></div>
+            </div>
+        </div>
+        
+        <!-- Warning Tooltip -->
+        <div style="position: relative;">
+            <button style="background: #f59e0b; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer;">Attenzione</button>
+            <div style="position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); margin-bottom: 8px; background: #f59e0b; color: white; padding: 8px 12px; border-radius: 6px; font-size: 12px; white-space: nowrap; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                Questa azione richiede conferma
+                <div style="position: absolute; top: 100%; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 6px solid #f59e0b;"></div>
+            </div>
+        </div>
+        
+        <!-- Error Tooltip -->
+        <div style="position: relative;">
+            <button style="background: #ef4444; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer;">Elimina</button>
+            <div style="position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); margin-bottom: 8px; background: #ef4444; color: white; padding: 8px 12px; border-radius: 6px; font-size: 12px; white-space: nowrap; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                Attenzione: questa azione è irreversibile
+                <div style="position: absolute; top: 100%; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 6px solid #ef4444;"></div>
+            </div>
+        </div>
+    </div>
+</div>
 
 ---
 
@@ -347,7 +612,7 @@ Le notifiche toast mostrano messaggi temporanei all'utente.
 
 ### 🎯 Tipi di Toast
 
-```javascript
+\`\`\`javascript
 // Toast di successo
 showToast('success', 'Operazione Completata!', 'I dati sono stati salvati correttamente nel database.');
 
@@ -362,11 +627,69 @@ showToast('info', 'Nuova Funzionalità!', 'È disponibile una nuova versione del
 
 // Toast personalizzato con durata
 showToast('success', 'Upload Completato!', 'Il file è stato caricato con successo.', 3000);
-```
+\`\`\`
+
+**🎨 Anteprima Renderizzata:**
+
+<div style="position: relative; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin: 16px 0;">
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000; display: flex; flex-direction: column; gap: 12px; max-width: 400px;">
+        <!-- Success Toast -->
+        <div style="background: white; border: 1px solid #d1fae5; border-left: 4px solid #10b981; border-radius: 8px; padding: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); display: flex; align-items: flex-start; gap: 12px;">
+            <svg width="20" height="20" fill="#10b981" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+            </svg>
+            <div style="flex: 1;">
+                <div style="font-weight: 600; color: #065f46; margin-bottom: 4px;">Operazione Completata!</div>
+                <p style="margin: 0; color: #047857; font-size: 14px;">I dati sono stati salvati correttamente nel database.</p>
+            </div>
+            <button style="background: none; border: none; color: #6b7280; cursor: pointer; padding: 2px;">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Warning Toast -->
+        <div style="background: white; border: 1px solid #fef3c7; border-left: 4px solid #f59e0b; border-radius: 8px; padding: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); display: flex; align-items: flex-start; gap: 12px;">
+            <svg width="20" height="20" fill="#f59e0b" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"/>
+            </svg>
+            <div style="flex: 1;">
+                <div style="font-weight: 600; color: #92400e; margin-bottom: 4px;">Attenzione!</div>
+                <p style="margin: 0; color: #b45309; font-size: 14px;">Alcuni campi potrebbero non essere stati salvati.</p>
+            </div>
+            <button style="background: none; border: none; color: #6b7280; cursor: pointer; padding: 2px;">×</button>
+        </div>
+        
+        <!-- Error Toast -->
+        <div style="background: white; border: 1px solid #fecaca; border-left: 4px solid #ef4444; border-radius: 8px; padding: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); display: flex; align-items: flex-start; gap: 12px;">
+            <svg width="20" height="20" fill="#ef4444" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"/>
+            </svg>
+            <div style="flex: 1;">
+                <div style="font-weight: 600; color: #991b1b; margin-bottom: 4px;">Errore di Connessione!</div>
+                <p style="margin: 0; color: #dc2626; font-size: 14px;">Impossibile connettersi al server. Riprova più tardi.</p>
+            </div>
+            <button style="background: none; border: none; color: #6b7280; cursor: pointer; padding: 2px;">×</button>
+        </div>
+        
+        <!-- Info Toast -->
+        <div style="background: white; border: 1px solid #bfdbfe; border-left: 4px solid #3b82f6; border-radius: 8px; padding: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); display: flex; align-items: flex-start; gap: 12px;">
+            <svg width="20" height="20" fill="#3b82f6" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/>
+            </svg>
+            <div style="flex: 1;">
+                <div style="font-weight: 600; color: #1e40af; margin-bottom: 4px;">Nuova Funzionalità!</div>
+                <p style="margin: 0; color: #2563eb; font-size: 14px;">È disponibile una nuova versione dell'applicazione.</p>
+            </div>
+            <button style="background: none; border: none; color: #6b7280; cursor: pointer; padding: 2px;">×</button>
+        </div>
+    </div>
+</div>
 
 ### 🎛️ Funzione Toast Avanzata
 
-```javascript
+\`\`\`javascript
 function showToast(type, title, message, duration = 5000) {
     const container = document.getElementById('toastContainer') || createToastContainer();
     const toast = document.createElement('div');
@@ -416,7 +739,7 @@ function createToastContainer() {
     document.body.appendChild(container);
     return container;
 }
-```
+\`\`\`
 
 ---
 
@@ -426,7 +749,7 @@ Le schede organizzano il contenuto in sezioni navigabili.
 
 ### 🎯 Tabs Base
 
-```html
+\`\`\`html
 <div class="admin-card">
     <div class="admin-card-header">
         <h3 class="admin-card-title">Impostazioni Utente</h3>
@@ -493,959 +816,78 @@ Le schede organizzano il contenuto in sezioni navigabili.
                     </div>
                 </div>
             </div>
-            
-            <!-- Sicurezza Tab -->
-            <div id="security" class="admin-tab-panel">
-                <div class="p-6">
-                    <h4 class="mb-4">Impostazioni di Sicurezza</h4>
-                    <div class="admin-form-group">
-                        <label class="d-flex align-center gap-3">
-                            <div class="admin-toggle">
-                                <input type="checkbox" class="admin-toggle-input" checked>
-                                <span class="admin-toggle-slider"></span>
-                            </div>
-                            <div>
-                                <strong>Autenticazione a Due Fattori</strong>
-                                <p class="text-sm text-gray-600 mb-0">Aggiungi un livello extra di sicurezza al tuo account</p>
-                            </div>
-                        </label>
-                    </div>
-                    <div class="admin-form-group">
-                        <label class="admin-form-label">Cambia Password</label>
-                        <input type="password" class="admin-form-input" placeholder="Password attuale">
-                        <input type="password" class="admin-form-input mt-2" placeholder="Nuova password">
-                        <input type="password" class="admin-form-input mt-2" placeholder="Conferma nuova password">
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Notifiche Tab -->
-            <div id="notifications" class="admin-tab-panel">
-                <div class="p-6">
-                    <h4 class="mb-4">Preferenze Notifiche</h4>
-                    <div class="space-y-4">
-                        <label class="d-flex align-center gap-3">
-                            <div class="admin-toggle">
-                                <input type="checkbox" class="admin-toggle-input" checked>
-                                <span class="admin-toggle-slider"></span>
-                            </div>
-                            <div>
-                                <strong>Notifiche Email</strong>
-                                <p class="text-sm text-gray-600 mb-0">Ricevi aggiornamenti via email</p>
-                            </div>
-                        </label>
-                        <label class="d-flex align-center gap-3">
-                            <div class="admin-toggle">
-                                <input type="checkbox" class="admin-toggle-input">
-                                <span class="admin-toggle-slider"></span>
-                            </div>
-                            <div>
-                                <strong>Notifiche Push</strong>
-                                <p class="text-sm text-gray-600 mb-0">Ricevi notifiche push sul browser</p>
-                            </div>
-                        </label>
-                        <label class="d-flex align-center gap-3">
-                            <div class="admin-toggle">
-                                <input type="checkbox" class="admin-toggle-input" checked>
-                                <span class="admin-toggle-slider"></span>
-                            </div>
-                            <div>
-                                <strong>Newsletter</strong>
-                                <p class="text-sm text-gray-600 mb-0">Ricevi la newsletter settimanale</p>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Fatturazione Tab -->
-            <div id="billing" class="admin-tab-panel">
-                <div class="p-6">
-                    <h4 class="mb-4">Informazioni di Fatturazione</h4>
-                    <div class="admin-alert admin-alert-info mb-4">
-                        <strong>Piano Attuale:</strong> Professional - €29/mese
-                    </div>
-                    <div class="admin-form-group">
-                        <label class="admin-form-label">Metodo di Pagamento</label>
-                        <div class="admin-card p-4">
-                            <div class="d-flex align-center gap-3">
-                                <svg width="32" height="20" viewBox="0 0 32 20" fill="none">
-                                    <rect width="32" height="20" rx="4" fill="#1a365d"/>
-                                    <text x="16" y="12" text-anchor="middle" fill="white" font-size="8">VISA</text>
-                                </svg>
-                                <div>
-                                    <strong>**** **** **** 1234</strong>
-                                    <p class="text-sm text-gray-600 mb-0">Scade 12/25</p>
-                                </div>
-                                <button class="admin-btn admin-btn-sm admin-btn-secondary ml-auto">
-                                    Modifica
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
-```
+\`\`\`
 
----
+**🎨 Anteprima Renderizzata:**
 
-## 🎵 Accordion
-
-Gli accordion organizzano contenuti in sezioni espandibili.
-
-### 🎯 Accordion Base
-
-```html
-<div class="admin-card">
-    <div class="admin-card-header">
-        <h3 class="admin-card-title">Domande Frequenti</h3>
-        <p class="admin-card-subtitle">Trova risposte alle domande più comuni</p>
-    </div>
-    <div class="admin-card-body p-0">
-        <div class="admin-accordion">
-            <!-- Item 1 -->
-            <div class="admin-accordion-item">
-                <button class="admin-accordion-header" onclick="toggleAccordion(this)">
-                    <span>Come posso reimpostare la mia password?</span>
-                    <svg class="admin-accordion-icon" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+<div style="position: relative; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin: 16px 0;">
+    <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden;">
+        <!-- Card Header -->
+        <div style="padding: 20px; border-bottom: 1px solid #e5e7eb;">
+            <h3 style="margin: 0; font-size: 18px; font-weight: 600; color: #111827;">Impostazioni Utente</h3>
+        </div>
+        
+        <!-- Tab Navigation -->
+        <div style="border-bottom: 1px solid #e5e7eb;">
+            <div style="display: flex; padding: 0 20px;">
+                <button style="background: none; border: none; padding: 12px 16px; border-bottom: 2px solid #2563eb; color: #2563eb; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 6px;">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
                     </svg>
+                    Profilo
                 </button>
-                <div class="admin-accordion-content">
-                    <div class="admin-accordion-body">
-                        <p>Per reimpostare la password, segui questi passaggi:</p>
-                        <ol>
-                            <li>Vai alla pagina di login</li>
-                            <li>Clicca su "Password dimenticata?"</li>
-                            <li>Inserisci il tuo indirizzo email</li>
-                            <li>Controlla la tua email per il link di reset</li>
-                            <li>Segui le istruzioni nell'email</li>
-                        </ol>
-                        <div class="admin-alert admin-alert-info mt-3">
-                            <strong>Nota:</strong> Il link di reset è valido per 24 ore.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Item 2 -->
-            <div class="admin-accordion-item">
-                <button class="admin-accordion-header" onclick="toggleAccordion(this)">
-                    <span>Come posso cambiare il mio piano di abbonamento?</span>
-                    <svg class="admin-accordion-icon" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+                <button style="background: none; border: none; padding: 12px 16px; border-bottom: 2px solid transparent; color: #6b7280; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 6px;">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
                     </svg>
+                    Sicurezza
                 </button>
-                <div class="admin-accordion-content">
-                    <div class="admin-accordion-body">
-                        <p>Puoi modificare il tuo piano in qualsiasi momento:</p>
-                        <ul>
-                            <li>Vai alle <strong>Impostazioni Account</strong></li>
-                            <li>Seleziona la scheda <strong>Fatturazione</strong></li>
-                            <li>Clicca su <strong>Cambia Piano</strong></li>
-                            <li>Scegli il nuovo piano desiderato</li>
-                        </ul>
-                        <div class="d-flex gap-2 mt-3">
-                            <button class="admin-btn admin-btn-sm admin-btn-primary">
-                                Vai alle Impostazioni
-                            </button>
-                            <button class="admin-btn admin-btn-sm admin-btn-secondary">
-                                Confronta Piani
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Item 3 -->
-            <div class="admin-accordion-item">
-                <button class="admin-accordion-header" onclick="toggleAccordion(this)">
-                    <span>Quali sono i metodi di pagamento accettati?</span>
-                    <svg class="admin-accordion-icon" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+                <button style="background: none; border: none; padding: 12px 16px; border-bottom: 2px solid transparent; color: #6b7280; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 6px;">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"/>
                     </svg>
+                    Notifiche
                 </button>
-                <div class="admin-accordion-content">
-                    <div class="admin-accordion-body">
-                        <p>Accettiamo i seguenti metodi di pagamento:</p>
-                        <div class="d-grid grid-cols-2 gap-4 mt-3">
-                            <div class="admin-card p-3">
-                                <h5>Carte di Credito</h5>
-                                <ul class="mb-0">
-                                    <li>Visa</li>
-                                    <li>Mastercard</li>
-                                    <li>American Express</li>
-                                </ul>
-                            </div>
-                            <div class="admin-card p-3">
-                                <h5>Pagamenti Digitali</h5>
-                                <ul class="mb-0">
-                                    <li>PayPal</li>
-                                    <li>Apple Pay</li>
-                                    <li>Google Pay</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <button style="background: none; border: none; padding: 12px 16px; border-bottom: 2px solid transparent; color: #6b7280; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 6px;">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/>
+                    </svg>
+                    Fatturazione
+                </button>
+            </div>
+        </div>
+        
+        <!-- Tab Content -->
+        <div style="padding: 24px;">
+            <h4 style="margin: 0 0 16px 0; font-size: 16px; font-weight: 600;">Informazioni Personali</h4>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                <div>
+                    <label style="display: block; font-weight: 500; color: #374151; margin-bottom: 6px;">Nome</label>
+                    <input style="width: 100%; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px;" value="Mario" />
+                </div>
+                <div>
+                    <label style="display: block; font-weight: 500; color: #374151; margin-bottom: 6px;">Cognome</label>
+                    <input style="width: 100%; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px;" value="Rossi" />
+                </div>
+                <div>
+                    <label style="display: block; font-weight: 500; color: #374151; margin-bottom: 6px;">Email</label>
+                    <input style="width: 100%; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px;" value="mario.rossi@esempio.com" />
+                </div>
+                <div>
+                    <label style="display: block; font-weight: 500; color: #374151; margin-bottom: 6px;">Telefono</label>
+                    <input style="width: 100%; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px;" value="+39 123 456 7890" />
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-```
-
----
-
-## 🔄 Toggle Switch
-
-Gli interruttori toggle permettono di attivare/disattivare opzioni.
-
-### 🎯 Toggle Base
-
-```html
-<!-- Toggle semplice -->
-<div class="admin-form-group">
-    <label class="d-flex align-center gap-3">
-        <div class="admin-toggle">
-            <input type="checkbox" class="admin-toggle-input" id="notifications">
-            <span class="admin-toggle-slider"></span>
-        </div>
-        <span>Abilita notifiche</span>
-    </label>
-</div>
-
-<!-- Toggle con descrizione -->
-<div class="admin-form-group">
-    <label class="d-flex align-center gap-3">
-        <div class="admin-toggle">
-            <input type="checkbox" class="admin-toggle-input" id="darkMode" checked>
-            <span class="admin-toggle-slider"></span>
-        </div>
-        <div>
-            <strong>Modalità Scura</strong>
-            <p class="text-sm text-gray-600 mb-0">Attiva il tema scuro per ridurre l'affaticamento degli occhi</p>
-        </div>
-    </label>
-</div>
-
-<!-- Toggle disabilitato -->
-<div class="admin-form-group">
-    <label class="d-flex align-center gap-3 opacity-50">
-        <div class="admin-toggle">
-            <input type="checkbox" class="admin-toggle-input" disabled>
-            <span class="admin-toggle-slider"></span>
-        </div>
-        <span>Funzionalità non disponibile</span>
-    </label>
-</div>
-```
-
-### 🎨 Toggle Colorati
-
-```html
-<!-- Toggle Success -->
-<div class="admin-toggle admin-toggle-success">
-    <input type="checkbox" class="admin-toggle-input" checked>
-    <span class="admin-toggle-slider"></span>
-</div>
-
-<!-- Toggle Warning -->
-<div class="admin-toggle admin-toggle-warning">
-    <input type="checkbox" class="admin-toggle-input" checked>
-    <span class="admin-toggle-slider"></span>
-</div>
-
-<!-- Toggle Danger -->
-<div class="admin-toggle admin-toggle-danger">
-    <input type="checkbox" class="admin-toggle-input" checked>
-    <span class="admin-toggle-slider"></span>
-</div>
-```
-
----
-
-## 📊 Progress Bar
-
-Le barre di progresso mostrano l'avanzamento di un'operazione.
-
-### 🎯 Progress Base
-
-```html
-<!-- Progress standard -->
-<div class="admin-form-group">
-    <div class="d-flex justify-between align-center mb-2">
-        <span class="admin-form-label">Caricamento File</span>
-        <span class="text-sm text-gray-600">75%</span>
-    </div>
-    <div class="admin-progress">
-        <div class="admin-progress-bar" style="width: 75%"></div>
-    </div>
-</div>
-
-<!-- Progress con colori -->
-<div class="admin-form-group">
-    <div class="d-flex justify-between align-center mb-2">
-        <span class="admin-form-label">Spazio Utilizzato</span>
-        <span class="text-sm text-gray-600">8.2 GB / 10 GB</span>
-    </div>
-    <div class="admin-progress">
-        <div class="admin-progress-bar warning" style="width: 82%"></div>
-    </div>
-</div>
-
-<!-- Progress completato -->
-<div class="admin-form-group">
-    <div class="d-flex justify-between align-center mb-2">
-        <span class="admin-form-label">Backup Completato</span>
-        <svg width="16" height="16" fill="#10b981" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
-        </svg>
-    </div>
-    <div class="admin-progress">
-        <div class="admin-progress-bar success" style="width: 100%"></div>
-    </div>
-</div>
-```
-
-### 🎨 Progress Animato
-
-```html
-<!-- Progress con animazione -->
-<div class="admin-progress">
-    <div class="admin-progress-bar admin-progress-animated" style="width: 60%"></div>
-</div>
-
-<!-- Progress striped -->
-<div class="admin-progress">
-    <div class="admin-progress-bar admin-progress-striped" style="width: 45%"></div>
-</div>
-
-<!-- Progress con gradiente -->
-<div class="admin-progress">
-    <div class="admin-progress-bar admin-progress-gradient" style="width: 70%"></div>
-</div>
-```
-
----
-
-## ⏳ Loading States
-
-Gli stati di caricamento informano l'utente che un'operazione è in corso.
-
-### 🎯 Spinner
-
-```html
-<!-- Spinner base -->
-<div class="admin-loading">
-    <div class="admin-spinner"></div>
-    <span>Caricamento...</span>
-</div>
-
-<!-- Spinner grande -->
-<div class="admin-loading">
-    <div class="admin-spinner admin-spinner-lg"></div>
-    <span>Elaborazione in corso...</span>
-</div>
-
-<!-- Spinner piccolo -->
-<div class="admin-loading">
-    <div class="admin-spinner admin-spinner-sm"></div>
-    <span>Salvando...</span>
-</div>
-
-<!-- Spinner inline -->
-<button class="admin-btn admin-btn-primary" disabled>
-    <div class="admin-spinner admin-spinner-sm mr-2"></div>
-    Salvando...
-</button>
-```
-
-### 🦴 Skeleton Loading
-
-```html
-<!-- Skeleton per lista utenti -->
-<div class="admin-card">
-    <div class="admin-card-header">
-        <div class="admin-skeleton admin-skeleton-text" style="width: 200px;"></div>
-    </div>
-    <div class="admin-card-body">
-        <div class="space-y-4">
-            <div class="d-flex align-center gap-3">
-                <div class="admin-skeleton admin-skeleton-avatar"></div>
-                <div style="flex: 1;">
-                    <div class="admin-skeleton admin-skeleton-text"></div>
-                    <div class="admin-skeleton admin-skeleton-text" style="width: 60%;"></div>
-                </div>
-                <div class="admin-skeleton admin-skeleton-button"></div>
-            </div>
-            <div class="d-flex align-center gap-3">
-                <div class="admin-skeleton admin-skeleton-avatar"></div>
-                <div style="flex: 1;">
-                    <div class="admin-skeleton admin-skeleton-text"></div>
-                    <div class="admin-skeleton admin-skeleton-text" style="width: 80%;"></div>
-                </div>
-                <div class="admin-skeleton admin-skeleton-button"></div>
-            </div>
-            <div class="d-flex align-center gap-3">
-                <div class="admin-skeleton admin-skeleton-avatar"></div>
-                <div style="flex: 1;">
-                    <div class="admin-skeleton admin-skeleton-text"></div>
-                    <div class="admin-skeleton admin-skeleton-text" style="width: 45%;"></div>
-                </div>
-                <div class="admin-skeleton admin-skeleton-button"></div>
+            <div>
+                <label style="display: block; font-weight: 500; color: #374151; margin-bottom: 6px;">Bio</label>
+                <textarea style="width: 100%; padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; resize: vertical;" rows="3" placeholder="Scrivi qualcosa su di te..."></textarea>
             </div>
         </div>
     </div>
 </div>
-
-<!-- Skeleton per tabella -->
-<div class="admin-table-container">
-    <table class="admin-table">
-        <thead>
-            <tr>
-                <th><div class="admin-skeleton admin-skeleton-text" style="width: 100px;"></div></th>
-                <th><div class="admin-skeleton admin-skeleton-text" style="width: 120px;"></div></th>
-                <th><div class="admin-skeleton admin-skeleton-text" style="width: 80px;"></div></th>
-                <th><div class="admin-skeleton admin-skeleton-text" style="width: 60px;"></div></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><div class="admin-skeleton admin-skeleton-text"></div></td>
-                <td><div class="admin-skeleton admin-skeleton-text"></div></td>
-                <td><div class="admin-skeleton admin-skeleton-text" style="width: 60%;"></div></td>
-                <td><div class="admin-skeleton admin-skeleton-button admin-skeleton-sm"></div></td>
-            </tr>
-            <tr>
-                <td><div class="admin-skeleton admin-skeleton-text"></div></td>
-                <td><div class="admin-skeleton admin-skeleton-text"></div></td>
-                <td><div class="admin-skeleton admin-skeleton-text" style="width: 80%;"></div></td>
-                <td><div class="admin-skeleton admin-skeleton-button admin-skeleton-sm"></div></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-```
-
----
-
-## 🍞 Breadcrumbs
-
-I breadcrumb mostrano la posizione corrente nella navigazione.
-
-### 🎯 Breadcrumb Base
-
-```html
-<nav class="admin-breadcrumb">
-    <div class="admin-breadcrumb-item">
-        <a href="#" class="admin-breadcrumb-link">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
-            </svg>
-            Dashboard
-        </a>
-    </div>
-    <svg class="admin-breadcrumb-separator" fill="currentColor" viewBox="0 0 20 20">
-        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/>
-    </svg>
-    <div class="admin-breadcrumb-item">
-        <a href="#" class="admin-breadcrumb-link">Gestione Utenti</a>
-    </div>
-    <svg class="admin-breadcrumb-separator" fill="currentColor" viewBox="0 0 20 20">
-        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/>
-    </svg>
-    <div class="admin-breadcrumb-item">
-        <span class="admin-breadcrumb-current">Mario Rossi</span>
-    </div>
-</nav>
-```
-
----
-
-## 🎨 Personalizzazione Avanzata
-
-### 🎯 Variabili CSS Personalizzabili
-
-```css
-:root {
-  /* Colori Principali */
-  --primary-color: #2563eb;
-  --secondary-color: #64748b;
-  --success-color: #10b981;
-  --warning-color: #f59e0b;
-  --danger-color: #ef4444;
-  --info-color: #06b6d4;
-  
-  /* Modal */
-  --modal-overlay-bg: rgba(0, 0, 0, 0.5);
-  --modal-border-radius: 12px;
-  --modal-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  
-  /* Toast */
-  --toast-duration: 5000ms;
-  --toast-slide-distance: 100%;
-  --toast-border-radius: 8px;
-  
-  /* Tooltip */
-  --tooltip-bg: #1f2937;
-  --tooltip-color: #ffffff;
-  --tooltip-delay: 0.15s;
-  --tooltip-arrow-size: 6px;
-  
-  /* Progress */
-  --progress-height: 8px;
-  --progress-border-radius: 4px;
-  --progress-bg: #e5e7eb;
-  
-  /* Toggle */
-  --toggle-width: 44px;
-  --toggle-height: 24px;
-  --toggle-border-radius: 12px;
-  
-  /* Animazioni */
-  --transition-fast: 0.15s ease;
-  --transition-normal: 0.3s ease;
-  --transition-slow: 0.5s ease;
-}
-```
-
-### 🌙 Tema Scuro
-
-```css
-[data-theme="dark"] {
-  --primary-color: #3b82f6;
-  --bg-color: #111827;
-  --surface-color: #1f2937;
-  --text-color: #f9fafb;
-  --border-color: #374151;
-  
-  /* Modal Dark */
-  --modal-overlay-bg: rgba(0, 0, 0, 0.8);
-  
-  /* Tooltip Dark */
-  --tooltip-bg: #374151;
-  --tooltip-color: #f9fafb;
-}
-```
-
----
-
-## 🔧 JavaScript API Completa
-
-### 🎯 Inizializzazione
-
-```javascript
-// Inizializza il framework
-const adminFramework = new AdminFramework({
-    theme: 'light', // 'light' | 'dark' | 'auto'
-    toastPosition: 'top-right', // 'top-left' | 'top-right' | 'bottom-right' | 'bottom-left'
-    modalCloseOnOverlay: true,
-    tooltipDelay: 150,
-    debugMode: false
-});
-
-// Event listeners automatici
-adminFramework.init();
-```
-
-### 🎛️ Metodi Principali
-
-```javascript
-// Modal
-adminFramework.modal.open('modalId');
-adminFramework.modal.close('modalId');
-adminFramework.modal.closeAll();
-
-// Toast
-adminFramework.toast.show('success', 'Titolo', 'Messaggio', 5000);
-adminFramework.toast.clear(); // Rimuove tutti i toast
-
-// Dropdown
-adminFramework.dropdown.toggle('dropdownId');
-adminFramework.dropdown.closeAll();
-
-// Tabs
-adminFramework.tabs.switch('tabId');
-adminFramework.tabs.getActive();
-
-// Accordion
-adminFramework.accordion.toggle('accordionId');
-adminFramework.accordion.openAll();
-adminFramework.accordion.closeAll();
-
-// Theme
-adminFramework.theme.set('dark');
-adminFramework.theme.toggle();
-adminFramework.theme.get();
-
-// Utilities
-adminFramework.utils.debounce(func, delay);
-adminFramework.utils.throttle(func, delay);
-adminFramework.utils.validateForm(formElement);
-```
-
----
-
-## 📱 Responsive Design
-
-### 🎯 Breakpoints
-
-```css
-/* Mobile First Approach */
-.admin-component {
-  /* Mobile styles (default) */
-}
-
-@media (min-width: 640px) {
-  /* Tablet */
-  .admin-component {
-    /* Tablet styles */
-  }
-}
-
-@media (min-width: 768px) {
-  /* Desktop */
-  .admin-component {
-    /* Desktop styles */
-  }
-}
-
-@media (min-width: 1024px) {
-  /* Large Desktop */
-  .admin-component {
-    /* Large desktop styles */
-  }
-}
-```
-
-### 📱 Componenti Responsive
-
-```html
-<!-- Modal responsive -->
-<div class="admin-modal admin-modal-responsive">
-  <!-- Su mobile occupa tutto lo schermo -->
-  <!-- Su desktop ha dimensioni fisse -->
-</div>
-
-<!-- Dropdown responsive -->
-<div class="admin-dropdown admin-dropdown-responsive">
-  <!-- Su mobile si apre come modal -->
-  <!-- Su desktop come dropdown normale -->
-</div>
-
-<!-- Tabs responsive -->
-<div class="admin-tabs admin-tabs-responsive">
-  <!-- Su mobile le tab diventano accordion -->
-  <!-- Su desktop rimangono tab -->
-</div>
-```
-
-Un esempio di layout responsive con classi di utility:
-
-```html
-<div class="grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-  <!-- Responsive grid -->
-</div>
-```
-
----
-
-## ♿ Accessibilità (WCAG AA)
-
-### 🎯 Attributi ARIA
-
-```html
-<!-- Modal accessibile -->
-<div class="admin-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="admin-modal">
-        <div class="admin-modal-header">
-            <h3 id="modal-title" class="admin-modal-title">Titolo Modal</h3>
-            <button class="admin-modal-close" aria-label="Chiudi modal">×</button>
-        </div>
-    </div>
-</div>
-
-<!-- Dropdown accessibile -->
-<div class="admin-dropdown">
-    <button class="admin-dropdown-toggle" 
-            aria-haspopup="true" 
-            aria-expanded="false"
-            aria-controls="dropdown-menu">
-        Menu
-    </button>
-    <div class="admin-dropdown-menu" 
-         id="dropdown-menu" 
-         role="menu">
-        <a href="#" class="admin-dropdown-item" role="menuitem">Opzione 1</a>
-    </div>
-</div>
-
-<!-- Toggle accessibile -->
-<label class="d-flex align-center gap-3">
-    <div class="admin-toggle">
-        <input type="checkbox" 
-               class="admin-toggle-input" 
-               role="switch"
-               aria-checked="false"
-               aria-describedby="toggle-description">
-        <span class="admin-toggle-slider"></span>
-    </div>
-    <div>
-        <span>Abilita notifiche</span>
-        <p id="toggle-description" class="text-sm text-gray-600 mb-0">
-            Riceverai notifiche quando ci sono aggiornamenti importanti
-        </p>
-    </div>
-</label>
-```
-
-### ⌨️ Navigazione da Tastiera
-
-```javascript
-// Gestione focus trap nei modal
-function trapFocus(element) {
-    const focusableElements = element.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
-    const firstElement = focusableElements[0];
-    const lastElement = focusableElements[focusableElements.length - 1];
-
-    element.addEventListener('keydown', (e) => {
-        if (e.key === 'Tab') {
-            if (e.shiftKey) {
-                if (document.activeElement === firstElement) {
-                    lastElement.focus();
-                    e.preventDefault();
-                }
-            } else {
-                if (document.activeElement === lastElement) {
-                    firstElement.focus();
-                    e.preventDefault();
-                }
-            }
-        }
-    });
-}
-
-// Scorciatoie da tastiera globali
-document.addEventListener('keydown', (e) => {
-    // ESC per chiudere modal e dropdown
-    if (e.key === 'Escape') {
-        adminFramework.modal.closeAll();
-        adminFramework.dropdown.closeAll();
-    }
-    
-    // Ctrl/Cmd + K per focus su ricerca
-    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-        e.preventDefault();
-        const searchInput = document.querySelector('[data-search]');
-        if (searchInput) searchInput.focus();
-    }
-});
-```
-
----
-
-## 🚀 Performance e Ottimizzazione
-
-### 🎯 Lazy Loading
-
-```javascript
-// Caricamento lazy dei componenti
-const lazyComponents = {
-    modal: () => import('./components/modal.js'),
-    dropdown: () => import('./components/dropdown.js'),
-    toast: () => import('./components/toast.js')
-};
-
-// Inizializza solo quando necessario
-async function initComponent(name) {
-    if (!window.adminComponents[name]) {
-        const module = await lazyComponents[name]();
-        window.adminComponents[name] = new module.default();
-    }
-    return window.adminComponents[name];
-}
-```
-
-### 🔧 Debounce e Throttle
-
-```javascript
-// Debounce per ricerca
-const searchInput = document.getElementById('search');
-const debouncedSearch = adminFramework.utils.debounce((query) => {
-    performSearch(query);
-}, 300);
-
-searchInput.addEventListener('input', (e) => {
-    debouncedSearch(e.target.value);
-});
-
-// Throttle per scroll
-const throttledScroll = adminFramework.utils.throttle(() => {
-    updateScrollPosition();
-}, 16); // 60fps
-
-window.addEventListener('scroll', throttledScroll);
-```
-
----
-
-## 🧪 Testing
-
-### 🎯 Test Unitari
-
-```javascript
-// Test per componenti
-describe('AdminFramework Modal', () => {
-    test('should open modal', () => {
-        const modal = document.getElementById('testModal');
-        adminFramework.modal.open('testModal');
-        expect(modal.classList.contains('active')).toBe(true);
-    });
-
-    test('should close modal on ESC', () => {
-        const modal = document.getElementById('testModal');
-        adminFramework.modal.open('testModal');
-        
-        const escEvent = new KeyboardEvent('keydown', { key: 'Escape' });
-        document.dispatchEvent(escEvent);
-        
-        expect(modal.classList.contains('active')).toBe(false);
-    });
-});
-```
-
-### 🔍 Test di Accessibilità
-
-```javascript
-// Test ARIA
-describe('Accessibility Tests', () => {
-    test('modal should have correct ARIA attributes', () => {
-        const modal = document.querySelector('.admin-modal-overlay');
-        expect(modal.getAttribute('role')).toBe('dialog');
-        expect(modal.getAttribute('aria-modal')).toBe('true');
-    });
-
-    test('dropdown should be keyboard navigable', () => {
-        const dropdown = document.querySelector('.admin-dropdown');
-        const toggle = dropdown.querySelector('.admin-dropdown-toggle');
-        
-        toggle.focus();
-        const enterEvent = new KeyboardEvent('keydown', { key: 'Enter' });
-        toggle.dispatchEvent(enterEvent);
-        
-        expect(dropdown.classList.contains('active')).toBe(true);
-    });
-});
-```
-
----
-
-## 📦 Build e Deploy
-
-### 🎯 Minificazione CSS
-
-```bash
-# Usando PostCSS
-npx postcss css/admin-framework.css -o dist/admin-framework.min.css --use autoprefixer cssnano
-
-# Usando Sass
-sass --style=compressed css/admin-framework.scss dist/admin-framework.min.css
-```
-
-### 🚀 CDN Setup
-
-```html
-<!-- Versione di sviluppo -->
-<link rel="stylesheet" href="https://cdn.example.com/admin-framework/1.0.0/admin-framework.css">
-<script src="https://cdn.example.com/admin-framework/1.0.0/admin-framework.js"></script>
-
-<!-- Versione minificata per produzione -->
-<link rel="stylesheet" href="https://cdn.example.com/admin-framework/1.0.0/admin-framework.min.css">
-<script src="https://cdn.example.com/admin-framework/1.0.0/admin-framework.min.js"></script>
-```
-
----
-
-## 🔗 Integrazione con Framework
-
-### ⚛️ React
-
-```jsx
-import { useEffect } from 'react';
-import 'admin-framework/dist/admin-framework.css';
-
-function AdminModal({ isOpen, onClose, children }) {
-    useEffect(() => {
-        if (isOpen) {
-            window.adminFramework.modal.open('react-modal');
-        } else {
-            window.adminFramework.modal.close('react-modal');
-        }
-    }, [isOpen]);
-
-    return (
-        <div className="admin-modal-overlay" id="react-modal">
-            <div className="admin-modal">
-                {children}
-            </div>
-        </div>
-    );
-}
-```
-
-### 🟢 Vue.js
-
-```vue
-<template>
-    <div class="admin-modal-overlay" :class="{ active: isOpen }" ref="modal">
-        <div class="admin-modal">
-            <slot></slot>
-        </div>
-    </div>
-</template>
-
-<script>
-export default {
-    props: ['isOpen'],
-    mounted() {
-        this.$refs.modal.addEventListener('click', (e) => {
-            if (e.target === this.$refs.modal) {
-                this.$emit('close');
-            }
-        });
-    }
-}
-</script>
-```
-
----
-
-## 📚 Risorse Aggiuntive
-
-### 🎯 Link Utili
-
-- **Documentazione Completa**: [docs.admin-framework.com](https://docs.admin-framework.com)
-- **Esempi Live**: [examples.admin-framework.com](https://examples.admin-framework.com)
-- **GitHub Repository**: [github.com/admin-framework/css](https://github.com/admin-framework/css)
-- **NPM Package**: [npmjs.com/package/admin-framework](https://npmjs.com/package/admin-framework)
-
-### 🆘 Supporto
-
-- **Discord Community**: [discord.gg/admin-framework](https://discord.gg/admin-framework)
-- **Stack Overflow**: Tag `admin-framework`
-- **GitHub Issues**: Per bug reports e feature requests
-- **Email Support**: support@admin-framework.com
-
----
-
-## 📄 Licenza
-
-MIT License - Libero per uso commerciale e personale.
 
 ---
 
